@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+}
+* {
+  font-family: monospace;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.212);
+  padding: 30px;
+  width: 20%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.header {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 28px;
+  color: #fff;
+}
+
+.input,
+.dropdown {
+  margin-top: 20px;
+  padding: 14px 60px;
+  padding-left: 6px;
+  font-size: 17px;
+  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.13);
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.dropdown {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.dropdown:focus {
+  background: transparent;
+  border: 1px solid #295ba7;
+  color: #283739;
+}
+
+.input:focus {
+  background: transparent;
+  outline: none;
+  border: 1px solid #295ba7;
+}
+
+.button {
+  margin: 25px 0;
+  font-size: 19px;
+  padding: 14px 60px;
+  background-color: #295ba7;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.button:hover {
+  background-color: #22559c;
+}
+
+.arrow {
+  text-align: right;
+}
