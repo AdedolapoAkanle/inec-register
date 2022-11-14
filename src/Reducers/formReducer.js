@@ -8,6 +8,10 @@ const INITIAL_STATE = {
     gender: "",
     searchType: "",
     password: "",
+    partyName: "",
+    partySlogan: "",
+    partyColor: "",
+    partyImage: "",
     arr: [],
   },
 };

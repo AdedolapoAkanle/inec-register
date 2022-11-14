@@ -6,6 +6,7 @@ import Update from "./View/Update";
 import Menu from "./View/Menu";
 import Home from "./View/Home";
 import Login from "./View/Login";
+import PartyRegister from "./View/partyRegister";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         ></Route>
         <Route path="/menu" element={<Menu />}></Route>
         <Route path="/register" element={<Register />}></Route>
+        <Route path="/partyRegister" element={<PartyRegister />}></Route>
         <Route
           path="/list"
           element={

@@ -28,7 +28,7 @@ const Login = ({ state, dispatchRegistration }) => {
         <input
           type="text"
           className="input"
-          placeholder="email"
+          placeholder="Email"
           onChange={(e) =>
             dispatchRegistration({ ...state, email: e.target.value })
           }
@@ -36,7 +36,7 @@ const Login = ({ state, dispatchRegistration }) => {
         <input
           type="password"
           className="input"
-          placeholder="password"
+          placeholder="Password"
           onChange={(e) =>
             dispatchRegistration({ ...state, password: e.target.value })
           }

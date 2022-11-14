@@ -7,11 +7,6 @@ import "./list.css";
 import { FaTimes, FaPen } from "react-icons/fa";
 
 const List = ({ state, dispatchRegistration }) => {
-  // $(document).ready(function () {
-  //   $('#dtBasicExample').DataTable();
-  //   $('.dataTables_length').addClass('bs-select');
-  // });
-
   const { arr, searchType } = state;
 
   useEffect(() => {
@@ -85,61 +80,19 @@ const List = ({ state, dispatchRegistration }) => {
             type="text"
             className="field"
             onChange={(e) => searchUser(e.target.value)}
-            placeholder="search..."
+            placeholder="Search..."
           />
         </div>
 
-        {/* <div className="table">
-          <table>
-            <thead>
-              <tr>
-                <td>Name</td>
-                <td>Email</td>
-                <td>Address</td>
-                <td>occupation</td>
-                <td>Gender</td>
-                <td>Action</td>
-              </tr>
-            </thead>
-            <tbody>
-              {arr.map((usr) => (
-                <tr key={usr.id}>
-                  <td>{usr.name}</td>
-                  <td>{usr.email}</td>
-                  <td>{usr.address}</td>
-                  <td>{usr.occupation}</td>
-                  <td>{usr.gender}</td>
-                  <td>
-                    <div className="icon">
-                      <Link className="link" to={`/update/${usr.id}`}>
-                        <FaPen className="pen" />
-                      </Link>
-                      <FaTimes
-                        className="times"
-                        onClick={() => eraseUser(usr.id)}
-                      />
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div> */}
-
-        <table
-          id="dtBasicExample"
-          class="table table-striped table-bordered table-sm"
-          cellspacing="0"
-          width="100%"
-        >
+        <table>
           <thead>
             <tr>
-              <th class="th-sm">Name</th>
-              <th class="th-sm">Email</th>
-              <th class="th-sm">Address</th>
-              <th class="th-sm">Occupation</th>
-              <th class="th-sm">Gender</th>
-              <th class="th-sm">Actions</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Address</th>
+              <th>Occupation</th>
+              <th>Gender</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -157,10 +110,13 @@ const List = ({ state, dispatchRegistration }) => {
                       <span className="tooltip-text">Edit</span>
                     </Link>
 
-                    <FaTimes
-                      className="times "
-                      onClick={() => eraseUser(usr.id)}
-                    />
+                    <span className="tooltip">
+                      <FaTimes
+                        className="times "
+                        onClick={() => eraseUser(usr.id)}
+                      />
+                      <span className="tooltip-text">Delete</span>
+                    </span>
                   </div>
                 </td>
               </tr>
@@ -169,14 +125,25 @@ const List = ({ state, dispatchRegistration }) => {
           <tfoot>
             <tr>
               <th>Name</th>
-              <th>Position</th>
-              <th>Office</th>
-              <th>Age</th>
-              <th>Start date</th>
-              <th>Salary</th>
+              <th>Email</th>
+              <th>Address</th>
+              <th>Occupation</th>
+              <th>Gender</th>
+              <th>Actions</th>
             </tr>
           </tfoot>
         </table>
+        <div class="pagination_section">
+          <a href="#"> Previous</a>
+          <a href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#" className="active">
+            4
+          </a>
+          <a href="#">5</a>
+          <a href="#">Next</a>
+        </div>
       </div>
     </div>
   );
