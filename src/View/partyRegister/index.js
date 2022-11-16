@@ -1,3 +1,4 @@
+// import { useRef } from "react";
 import { connect } from "react-redux";
 import { RegistrationAction } from "../../Actions/index";
 import { api } from "../../Api/api";
@@ -5,6 +6,8 @@ import "./party.css";
 
 const PartyRegister = ({ state, dispatchRegistration }) => {
   const { partyName, partyColor, partySlogan, partyImage } = state;
+  // let selectedFile = useRef();
+  // console.log(selectedFile);
 
   const handleSubmit = async () => {
     const data = {
@@ -15,22 +18,22 @@ const PartyRegister = ({ state, dispatchRegistration }) => {
     };
     console.log(data);
 
+    // if (selectedFile.current.files.length === 0) {
+    //   return false;
+    // } else {
+    //   const formData = new FormData();
+    //   formData.append("picture", selectedFile.current.files[0]);
+    //   // formData.append("name", partyImage);
+    // }
+
     const res = await api("partyRegister.php", data);
     console.log(res);
 
     //   dispatchRegistration("");
-    upload();
   };
 
-  const upload = async () => {
-    const data = {
-      partyImage,
-    };
-
-    console.log(data);
-
-    const res = await api("upload.php", data);
-    console.log(res);
+  const handleFile = async (e) => {
+    console.log(e.target.files);
   };
 
   return (
@@ -65,11 +68,10 @@ const PartyRegister = ({ state, dispatchRegistration }) => {
 
         <input
           type="file"
-          name="image"
+          name="file"
           className="form-image"
-          onChange={(e) =>
-            dispatchRegistration({ ...state, partyImage: e.target.value })
-          }
+          // ref={selectedFile}
+          onChange={handleFile}
         />
 
         <button name="register" className="form-btn" onClick={handleSubmit}>

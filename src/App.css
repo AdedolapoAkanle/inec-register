@@ -4,8 +4,5 @@
   justify-content: center;
   height: 100vh;
   width: 100%;
-  /* background-image: url("Image/bg3.jpg"); */
-  /* background-color: linear-gradient(90deg, #295ba7, #c5e5e3); */
   background: linear-gradient(360deg, #c5e5e3, #295ba7);
-  background-size: cover;
 }

@@ -20,6 +20,7 @@ const formReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case REGISTRATION:
       return { ...state, registerState: action.payload };
+
     default:
       return state;
   }
