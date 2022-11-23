@@ -7,6 +7,7 @@ import Menu from "./View/Menu";
 import Home from "./View/Home";
 import Login from "./View/Login";
 import PartyRegister from "./View/partyRegister";
+import CandidateRegister from "./View/CandidateRegister";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
         ></Route>
         <Route path="/menu" element={<Menu />}></Route>
         <Route path="/register" element={<Register />}></Route>
-        <Route path="/partyRegister" element={<PartyRegister />}></Route>
+        <Route path="/party" element={<PartyRegister />}></Route>
+        <Route path="/candidate" element={<CandidateRegister />}></Route>
         <Route
           path="/list"
           element={

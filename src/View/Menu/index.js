@@ -7,6 +7,7 @@ import {
   AiOutlineReconciliation,
   AiOutlineIdcard,
   AiOutlinePoweroff,
+  AiOutlineUsergroupAdd,
 } from "react-icons/ai";
 import { SiVultr } from "react-icons/si";
 const Menu = () => {
@@ -24,7 +25,7 @@ const Menu = () => {
           </Link>
         </div>
         <div className="power">
-          <Link className="txt  tooltip">
+          <Link to={"/"} className="txt  tooltip">
             <AiOutlinePoweroff className="logout " />
             <span className="tooltip-text">Logout</span>
           </Link>
@@ -32,8 +33,8 @@ const Menu = () => {
       </div>
       <div className="menu">
         <div className="box-container">
-          <div class="row1-container">
-            <div class="box box-down green">
+          <div className="row1-container">
+            <Link to={"/register"} class="box box-left green">
               <h2 className="head">Voters Registration</h2>
               <p className="texts">
                 Register to vote in the forthcoming election
@@ -41,9 +42,9 @@ const Menu = () => {
               <div className="icon icon-green">
                 <AiOutlineUserAdd />
               </div>
-            </div>
+            </Link>
 
-            <div class="box red">
+            <Link to={"/party"} className="box box-right red">
               <h2 className="head">Party Management</h2>
               <p className="texts">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -51,9 +52,22 @@ const Menu = () => {
               <div className="icon icon-red">
                 <AiOutlineReconciliation />
               </div>
-            </div>
+            </Link>
+          </div>
+          <div className="center">
+            <Link to={"/candidate"} className="box box-center grey">
+              <h2 className="head">Candidates</h2>
+              <p className="texts">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              </p>
+              <div className="icon icon-grey">
+                <AiOutlineUsergroupAdd />
+              </div>
+            </Link>
+          </div>
 
-            <div class="box box-down blue">
+          <div className="row2-container">
+            <div className="box box-bottom-left blue">
               <h2 className="head">Voter's Card</h2>
               <p className="texts">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -62,9 +76,7 @@ const Menu = () => {
                 <AiOutlineIdcard />
               </div>
             </div>
-          </div>
-          <div class="row2-container">
-            <div class="box orange">
+            <div className="box box-bottom-right orange">
               <h2 className="head">Votes</h2>
               <p className="texts">
                 review number of votes casted for each party
@@ -83,7 +95,7 @@ const Menu = () => {
           <div className="footer-text">About Us</div>
           <div className="footer-text">Private Policy</div>
         </footer>
-        <p class="copyright">Dolapo Akanle © 2022</p>
+        <p className="copyright">Dolapo Akanle © 2022</p>
       </div>
     </div>
   );

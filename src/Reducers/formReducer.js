@@ -12,6 +12,11 @@ const INITIAL_STATE = {
     partySlogan: "",
     partyColor: "",
     partyImage: "",
+    candidateName: "",
+    candidateDob: "",
+    candidateParty: "",
+    candidateGender: "",
+    candidatePosition: "",
     arr: [],
   },
 };

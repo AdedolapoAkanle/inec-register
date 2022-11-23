@@ -46,6 +46,14 @@ const List = ({ state, dispatchRegistration }) => {
     alert(res);
     searchUser();
   };
+
+  const Pagination = ({ totalPosts, postPerPage }) => {
+    const pageNumbers = [];
+
+    for (let i = 1; 1 <= Math.ceil(totalPosts / postPerPage); i++) {
+      pageNumbers.push(i);
+    }
+  };
   return (
     <div className="container">
       <div className="main">

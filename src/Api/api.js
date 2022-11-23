@@ -9,7 +9,8 @@ export const api = async (page, data) => {
     },
     body: JSON.stringify(data),
   });
-
+  //   console.log(await req.json());
   const res = await req.json();
+
   return res;
 };
